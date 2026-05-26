@@ -33,7 +33,7 @@
 
 ## 📄 Abstract
 
-## Personas are widely used in software engineering to support requirements elicitation, design, and validation, but their manual creation is costly, time-consuming, and hard to scale. Recent LLM-based approaches automate persona generation from textual data; however, they typically rely on single-shot generation and subjective evaluations, limiting practical reliability. We present PerGent, an industry-grade method for persona generation built around an iterative critique-refinement loop. Specifically, PerGent uses a generator and a critic LLM agent, coordinated by an orchestrator, to iteratively refine personas using external resources such as interviews, surveys, and job postings through a critique-refinement loop with a user-defined maximum number of rounds. We deploy and evaluate PerGent in an industrial setting at Kinaxis, comparing it with three baselines, including state-of-the-art one-shot methods. In an expert in-situ evaluation, PerGent achieved the highest expert approval rate (96.9%), exceeding all baselines. We further compare PerGent-generated personas with best-practice personas manually created by domain experts prior to the adoption of LLMs. Compared to baselines, PerGent reproduces a larger proportion of expert content while also contributing substantial new content beyond the pre-LLM personas. We conclude with lessons learned from deploying and evaluating PerGent at Kinaxis.
+Personas are widely used in software engineering to support requirements elicitation, design, and validation, but their manual creation is costly, time-consuming, and hard to scale. Recent LLM-based approaches automate persona generation from textual data; however, they typically rely on single-shot generation and subjective evaluations, limiting practical reliability. We present PerGent, an industry-grade method for persona generation built around an iterative critique-refinement loop. Specifically, PerGent uses a generator and a critic LLM agent, coordinated by an orchestrator, to iteratively refine personas using external resources such as interviews, surveys, and job postings through a critique-refinement loop with a user-defined maximum number of rounds. We deploy and evaluate PerGent in an industrial setting at Kinaxis, comparing it with three baselines, including state-of-the-art one-shot methods. In an expert in-situ evaluation, PerGent achieved the highest expert approval rate (96.9%), exceeding all baselines. We further compare PerGent-generated personas with best-practice personas manually created by domain experts prior to the adoption of LLMs. Compared to baselines, PerGent reproduces a larger proportion of expert content while also contributing substantial new content beyond the pre-LLM personas. We conclude with lessons learned from deploying and evaluating PerGent at Kinaxis.
 
 ## 🏗️ Repository Structure
 
@@ -46,9 +46,9 @@
 │   ├── api.txt                     # API key placeholder (local only)
 │   └── README.md                   # Usage notes and setup steps
 ├── Experiments/                    # Data and scripts for research questions
-│   ├── RQ1/                         # Edit rates for generated personas
-│   ├── RQ2/                         # Similarity metrics and statistical tests
-│   ├── RQ3/                         # Token and API usage statistics
+│   ├── RQ1/                        # Edit rates for generated personas
+│   ├── RQ2/                        # Similarity metrics and statistical tests
+│   ├── RQ3/                        # Token and API usage statistics
 │   └── README.md                   # RQ data and script descriptions
 ├── Figures/                        # Plots and figures from the paper
 │   └── ...                         # Figures illustrating methodology and evaluation results
