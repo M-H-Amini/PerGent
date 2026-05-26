@@ -1,20 +1,31 @@
-This folder provides a high-level illustration of how the agents collaborate. The exact code and prompts are not disclosed since this is industrial work and the materials are proprietary.
+This folder provides a high-level illustration of the implementation for PerGent and the baseline used in the paper.
 
-## Getting Started
+Contents
 
-1. Install the required packages:
+- `pergent.py` — PerGent end-to-end orchestration (generator + critic + orchestrator).
+- `pergent_no_res.py` — PerGent variant without the retrieval/rescoring component (NoRes baseline).
+- `oneshot.py` — OneShot baseline generator.
+- `oneshot_res.py` — OneShot+Res baseline (OneShot with retrieval/rescoring).
+- `pergent_generator.txt`, `pergent_critic.txt`, `oneshot_generator.txt` — prompt/template files used by the scripts.
+- `api.txt` — local placeholder for your OpenAI API key (one line, the key only).
 
-   ```bash
-   pip install -U "autogen-agentchat"
-   pip install "autogen-ext[openai]"
-   ```
+Quick start
 
-2. Insert your OpenAI API key as `api.txt` file in the same directory as the script. The file should contain only the API key, without any additional text or formatting.
+1. Make sure you have Python 3 installed.
 
-3. Run the `main.py` script:
+2. Place your OpenAI (or compatible) API key in `api.txt` inside this folder. The file should contain only the key text.
 
-   ```bash
-   python main.py
-   ```
+3. Run any script using Python. Examples:
 
-4. Enjoy :)
+```bash
+python pergent.py
+python pergent_no_res.py
+python oneshot.py
+python oneshot_res.py
+```
+
+Notes
+
+- The scripts use the prompt files in this directory. Edit the `*_generator.txt` and `*_critic.txt` files to adjust behavior or to reproduce experiments.
+- See the repository root `Readme.md` for pointers to the `Experiments/` folder and the evaluation materials.
+- If your environment requires additional packages, install them as needed (this repo does not include an exhaustive requirements file).

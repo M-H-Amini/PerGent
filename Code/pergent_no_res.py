@@ -48,7 +48,7 @@ async def generate_persona(team, task):
             yield message
 
 async def main():
-    task = "Generate a persona for a supply planner."
+    task = "Generate a persona for a supply planner."    
     team = await teamConfig()
     async for message in generate_persona(team, task):
         print('-' * 20)

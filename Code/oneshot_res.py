@@ -1,0 +1,45 @@
+from openai import AsyncOpenAI
+import asyncio
+
+
+async def generate_persona(task: str):
+    client = AsyncOpenAI(
+        api_key=open("api.txt").read().strip()
+    )
+
+    system_message = open("oneshot_generator.txt").read().strip()
+
+    response = await client.responses.create(
+        model="gpt-4o",
+        input=[
+            {"role": "system", "content": system_message},
+            {"role": "user", "content": task},
+        ],
+    )
+
+    return response.output_text
+
+
+async def main():
+    ##  If any resources, include them here...
+    resource_files = []
+    resource_str = ""
+    if resource_files:
+        resource_str += "Resources:\n"
+    for file in resource_files:
+        with open(file, 'r') as f:
+            content = f.read()
+            resource_str += f"- {file}: {content}\n"
+
+    task = "Generate a persona for a supply planner."
+    if resource_str:
+        task = f"{resource_str}\n\n{task}"
+        
+    persona = await generate_persona(task)
+
+    print("-" * 20)
+    print(persona)
+
+
+if __name__ == "__main__":
+    asyncio.run(main())
