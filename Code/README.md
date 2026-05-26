@@ -3,10 +3,10 @@ This folder provides a high-level illustration of the implementation for PerGent
 Contents
 
 - `pergent.py` — PerGent end-to-end orchestration (generator + critic + orchestrator).
-- `pergent_no_res.py` — PerGent variant without the retrieval/rescoring component (NoRes baseline).
+- `pergent_no_res.py` — PerGent variant without the external resources (PerGentNoRes baseline).
 - `oneshot.py` — OneShot baseline generator.
-- `oneshot_res.py` — OneShot+Res baseline (OneShot with retrieval/rescoring).
-- `pergent_generator.txt`, `pergent_critic.txt`, `oneshot_generator.txt` — prompt/template files used by the scripts.
+- `oneshot_res.py` — OneShot+Res baseline (OneShot with external resources).
+- `pergent_generator.txt`, `pergent_critic.txt`, `oneshot_generator.txt` — prompt files used by the scripts.
 - `api.txt` — local placeholder for your OpenAI API key (one line, the key only).
 
 Quick start
