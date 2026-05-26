@@ -2,7 +2,7 @@
   <img src="Figures/PerGent.jpg" alt="PerGent Approach Overview" width="90%"/>
 </p>
 
-<h1 align="center">Agentic Persona Generation in Industry:<br>An In-Situ Evaluation and Lessons Learned</h1>
+<h1 align="center">Agentic Persona Generation with Critique-Refinement: An Industrial Evaluation</h1>
 
 <!-- <p align="center">
   <a href="https://scholar.google.com"><img src="https://img.shields.io/badge/Paper-PDF-red?logo=adobeacrobatreader&logoColor=white" alt="Paper PDF"/></a>
@@ -33,14 +33,25 @@
 
 ## 📄 Abstract
 
-## Personas are widely used in software engineering to support requirements elicitation, design, and validation, but their manual creation is costly, time-consuming, and hard to scale. Recent LLM-based approaches automate persona generation from textual data; however, they typically rely on single-shot generation and subjective evaluations, limiting practical reliability. We present PerGent, an industry-grade method for persona generation built around an iterative critique-refinement loop. Specifically, PerGent uses a generator and a critic LLM agent, coordinated by an orchestrator, to iteratively refine personas using external resources such as interviews, surveys, and job postings through a critique-refinement loop with a user-defined maximum number of rounds. We deploy and evaluate PerGent in an industrial setting at Kinaxis, comparing it with three baselines, including state-of-the-art one-shot methods. In an expert in-situ evaluation, PerGent achieved the highest expert approval rate (96.9\%), exceeding all baselines. We further compare PerGent-generated personas with best-practice personas manually created by domain experts prior to the adoption of LLMs. Compared to baselines, PerGent reproduces a larger proportion of expert content while also contributing substantial new content beyond the pre-LLM personas. We conclude with lessons learned from deploying and evaluating PerGent at Kinaxis.
+## Personas are widely used in software engineering to support requirements elicitation, design, and validation, but their manual creation is costly, time-consuming, and hard to scale. Recent LLM-based approaches automate persona generation from textual data; however, they typically rely on single-shot generation and subjective evaluations, limiting practical reliability. We present PerGent, an industry-grade method for persona generation built around an iterative critique-refinement loop. Specifically, PerGent uses a generator and a critic LLM agent, coordinated by an orchestrator, to iteratively refine personas using external resources such as interviews, surveys, and job postings through a critique-refinement loop with a user-defined maximum number of rounds. We deploy and evaluate PerGent in an industrial setting at Kinaxis, comparing it with three baselines, including state-of-the-art one-shot methods. In an expert in-situ evaluation, PerGent achieved the highest expert approval rate (96.9%), exceeding all baselines. We further compare PerGent-generated personas with best-practice personas manually created by domain experts prior to the adoption of LLMs. Compared to baselines, PerGent reproduces a larger proportion of expert content while also contributing substantial new content beyond the pre-LLM personas. We conclude with lessons learned from deploying and evaluating PerGent at Kinaxis.
 
 ## 🏗️ Repository Structure
 
 ```
 .
+├── Code/                           # Minimal runnable demo of PerGent orchestration
+│   ├── main.py                     # Orchestrator entry point
+│   ├── generator.txt               # Generator agent prompt
+│   ├── critic.txt                  # Critic agent prompt
+│   ├── api.txt                     # API key placeholder (local only)
+│   └── README.md                   # Usage notes and setup steps
+├── Experiments/                    # Data and scripts for research questions
+│   ├── RQ1/                         # Edit rates for generated personas
+│   ├── RQ2/                         # Similarity metrics and statistical tests
+│   ├── RQ3/                         # Token and API usage statistics
+│   └── README.md                   # RQ data and script descriptions
 ├── Figures/                        # Plots and figures from the paper
-│   └── ...                # Figures illustrating methodology and evaluation results
+│   └── ...                         # Figures illustrating methodology and evaluation results
 ├── Prompts/                        # Prompt outlines for PerGent agents & baselines
 │   └── ...
 ├── Supplementary Materials/        # Additional resources and detailed documentation
@@ -50,6 +61,8 @@
 
 | Folder                                                   | Description                                                                                                                                                                        |
 | -------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [`Code/`](Code/)                                         | Minimal runnable demo of the PerGent agent orchestration with setup notes.                                                                                                         |
+| [`Experiments/`](Experiments/)                           | Data and scripts organized by research question (RQ1-RQ3).                                                                                                                         |
 | [`Figures/`](Figures/)                                   | Contains plots and figures illustrating our methodology, tools architecture, and evaluation results.                                                                               |
 | [`Prompts/`](Prompts/)                                   | Contains the prompt outlines used in the **PerGent** agentic pipeline and the baseline approaches described in the paper.                                                          |
 | [`Supplementary Materials/`](Supplementary%20Materials/) | Contains a PDF with supplementary materials including the detailed **LLM-as-Judge** calibration process, as well as prompt outlines for PerGent's agents and the baseline prompts. |
@@ -63,6 +76,26 @@ This repository hosts the artifacts accompanying the paper **"Agentic Persona Ge
 ---
 
 ## 📂 Contents
+
+### Code
+
+The [`Code/`](Code/) directory contains a minimal runnable demo of the PerGent agent orchestration, including:
+
+- `main.py` orchestrator script.
+- `generator.txt` and `critic.txt` prompt files.
+- A local `api.txt` placeholder for your API key.
+
+See the setup steps in [`Code/README.md`](Code/README.md).
+
+### Experiments
+
+The [`Experiments/`](Experiments/) directory contains the data and scripts for each research question:
+
+- **RQ1**: Edit percentages for persona items (see `log_percentages.csv`).
+- **RQ2**: Similarity measurements, averages, and statistical tests (`measurements.csv`, `avg.csv`, `stat.csv`, `average.py`, `stat.py`).
+- **RQ3**: Token and API usage statistics (`tokens.csv`, `avg.csv`, `average.py`).
+
+See the details in [`Experiments/README.md`](Experiments/README.md).
 
 ### Prompts
 

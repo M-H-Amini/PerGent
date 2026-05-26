@@ -1,0 +1,4 @@
+PerGent vs,Distinctness p-value,Distinctness A12,Full Preservation p-value,Full Preservation A12,Partial Preservation p-value,Partial Preservation A12
+OneShot,0.000,0.73 (L),0.000,0.71 (M),0.000,0.67 (M)
+OneShot+Res,0.000,0.71 (L),0.000,0.72 (L),0.976,0.50 (N)
+PerGentNoRes,0.000,0.60 (S),0.000,0.65 (M),0.000,0.76 (L)
