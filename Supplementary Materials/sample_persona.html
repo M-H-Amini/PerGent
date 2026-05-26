@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Supply Planner Persona – Labeled Compact Figure</title>
+<style>
+  :root{
+    --bg:#ffffff; --ink:#1b1f24; --muted:#5b6572; --line:#e6e9ee;
+    --brand1:#3a86ff; --brand2:#8338ec; --brand3:#ff006e; --brand4:#fb5607;
+  }
+  body{ margin:0; padding:12px; background:#fff; }
+  .persona-figure{ box-sizing:border-box; width:438px; max-width:100%;
+    background:var(--bg); color:var(--ink); border:1px solid var(--line);
+    border-radius:12px; font: 12px/1.25 system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", sans-serif;
+    margin:0;
+  }
+  .pf-header{ display:flex; justify-content:space-between; align-items:center; padding:6px 8px; border-bottom:1px solid var(--line);
+    background:linear-gradient(135deg, rgba(58,134,255,.07), rgba(131,56,236,.07)); border-top-left-radius:12px; border-top-right-radius:12px; }
+  .pf-avatar{ width:74px; height:74px; border-radius:50%; flex:0 0 74px; display:grid; place-items:center;
+    background:transparent; box-shadow:none; }
+  .pf-avatar svg{ width:56px; height:56px; }
+  .pf-avatar img{ width:64px; height:64px; border-radius:50%; object-fit:cover; }
+  .pf-title{ font-weight:800; letter-spacing:.2px; margin:0; font-size:26px; }
+  .pf-sub{ color:var(--muted); font-size:10px; margin:0; }
+
+  .pf-body{ padding:6px 8px 4px; }
+  .card{ border:1px solid var(--line); border-radius:8px; padding:4px 6px; background:#fff; }
+
+  .sec{ display:grid; grid-template-columns:105px 1fr; column-gap:5px; align-items:start; margin-bottom:3px; }
+  .sec:last-child{ margin-bottom:0; }
+  .h{ color:var(--muted); text-transform:uppercase; letter-spacing:.25px; font-size:10px; font-weight:700; display:flex; align-items:center; gap:3px; }
+  .badge{ display:inline-grid; place-items:center; width:13px; height:13px; border-radius:3px; color:#fff; font-size:8px; font-weight:700 }
+  .b1{background:var(--brand1)} .b2{background:var(--brand2)} .b3{background:var(--brand3)} .b4{background:var(--brand4)}
+
+  ul{ list-style:none; padding:0; margin:0 }
+  li{ display:flex; align-items:flex-start; gap:4px; margin:1px 0; }
+  .dot{ width:4px; height:4px; border-radius:50%; background:currentColor; margin-top:5px; opacity:.55; flex:0 0 4px; }
+  .ref{ display:inline-grid; place-items:center; min-width:18px; height:13px; padding:0 2px; border-radius:3px;
+    color:#fff; font-size:7px; font-weight:800; line-height:1; margin-top:1px; flex:0 0 auto; }
+  .r1{background:var(--brand1)} .r2{background:var(--brand2)} .r3{background:var(--brand3)} .r4{background:var(--brand4)}
+  .pf-caption{ color:var(--muted); font-size:9px; line-height:1.25; padding:0 8px 7px; margin:0; }
+
+  @media print{ .persona-figure{ border-color:#cfd5dd; box-shadow:none } body{ padding:0; } }
+</style>
+</head>
+<body>
+  <figure class="persona-figure" role="group" aria-labelledby="pf-title">
+    <header class="pf-header">
+      <div>
+        <p id="pf-title" class="pf-title">Supply Planner</p>
+        <!-- <p class="pf-sub">Sample persona used to illustrate requirements elicitation</p> -->
+      </div>
+      <div class="pf-avatar" aria-label="avatar">
+        <img src="avatar.png" alt="Supply Planner avatar" />
+      </div>
+    </header>
+
+    <div class="pf-body">
+      <div class="card">
+
+        <div class="sec" aria-labelledby="h-jtd">
+          <div class="h" id="h-jtd">
+            <span class="badge b1">◆</span> Jobs to be Done
+          </div>
+          <ul>
+            <li><span class="ref r1">J1</span><span>Forecast demand for key stock keeping units (SKU)</span></li>
+            <li><span class="ref r1">J2</span><span>Assess supplier delay impact on service levels</span></li>
+            <li><span class="ref r1">J3</span><span>Reallocate inventory across regions</span></li>
+            <li><span class="ref r1">J4</span><span>Balance supply plans with production capacity</span></li>
+            <li><span class="ref r1">J5</span><span>Build weekly supply plans with constraints</span></li>
+            <li><span class="ref r1">J6</span><span>Prioritize orders during shortages</span></li>
+            <li><span class="ref r1">J7</span><span>Coordinate expediting actions with suppliers</span></li>
+            <li><span class="ref r1">J8</span><span>Track inventory health (days of supply, excess, obsolete)</span></li>
+            <li><span class="ref r1">J9</span><span>Align launch plans with marketing and sales</span></li>
+            <li><span class="ref r1">J10</span><span>Report plan risks and mitigation actions</span></li>
+          </ul>
+        </div>
+
+        <div class="sec" aria-labelledby="h-pain">
+          <div class="h" id="h-pain">
+            <span class="badge b2">!</span> Pain Points
+          </div>
+          <ul>
+            <li><span class="ref r2">P1</span><span>Supplier updates arrive late or inconsistently</span></li>
+            <li><span class="ref r2">P2</span><span>Fragmented demand and inventory data across teams</span></li>
+            <li><span class="ref r2">P3</span><span>Difficult to explain planning changes to stakeholders</span></li>
+            <li><span class="ref r2">P4</span><span>Frequent last-minute demand spikes disrupt plans</span></li>
+            <li><span class="ref r2">P5</span><span>Manual data cleanup across spreadsheets each cycle</span></li>
+            <li><span class="ref r2">P6</span><span>Limited visibility to in-transit inventory</span></li>
+            <li><span class="ref r2">P7</span><span>Conflicting priorities from sales and operations</span></li>
+            <li><span class="ref r2">P8</span><span>System latency during planning cycles</span></li>
+            <li><span class="ref r2">P9</span><span>Slow approvals for reallocations and exceptions</span></li>
+            <li><span class="ref r2">P10</span><span>KPI definitions vary by region and team</span></li>
+          </ul>
+        </div>
+
+        <div class="sec" aria-labelledby="h-skills">
+          <div class="h" id="h-skills">
+            <span class="badge b3">★</span> Skills
+          </div>
+          <ul>
+            <li><span class="ref r3">S1</span><span>Scenario planning &amp; inventory optimization</span></li>
+            <li><span class="ref r3">S2</span><span>Cross-functional decision making</span></li>
+            <li><span class="ref r3">S3</span><span>Stakeholder communication</span></li>
+            <li><span class="ref r3">S4</span><span>Statistical forecasting fundamentals</span></li>
+            <li><span class="ref r3">S5</span><span>Capacity planning and constraints modeling</span></li>
+            <li><span class="ref r3">S6</span><span>Risk assessment and mitigation planning</span></li>
+            <li><span class="ref r3">S7</span><span>Data wrangling and spreadsheet modeling</span></li>
+            <li><span class="ref r3">S8</span><span>Process improvement and standardization</span></li>
+            <li><span class="ref r3">S9</span><span>Negotiation with suppliers and internal teams</span></li>
+            <li><span class="ref r3">S10</span><span>Executive-ready storytelling</span></li>
+          </ul>
+        </div>
+
+        <div class="sec" aria-labelledby="h-tools">
+          <div class="h" id="h-tools">
+            <span class="badge b4">⌁</span> Tools
+          </div>
+          <ul>
+            <li><span class="ref r4">T1</span><span>Enterprise resource planning system (ERP)</span></li>
+            <li><span class="ref r4">T2</span><span>Supplier portals &amp; demand-planning dashboards</span></li>
+            <li><span class="ref r4">T3</span><span>Business intelligence (BI) reports &amp; inventory analytics tools</span></li>
+            <li><span class="ref r4">T4</span><span>Advanced planning system (APS)</span></li>
+            <li><span class="ref r4">T5</span><span>Spreadsheet models with macros</span></li>
+            <li><span class="ref r4">T6</span><span>Collaboration tools (Teams/Slack)</span></li>
+            <li><span class="ref r4">T7</span><span>Transportation management system (TMS)</span></li>
+            <li><span class="ref r4">T8</span><span>Master data management (MDM)</span></li>
+            <li><span class="ref r4">T9</span><span>EDI/ASN feeds for shipment updates</span></li>
+            <li><span class="ref r4">T10</span><span>KPI scorecards and alerting</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- <figcaption class="pf-caption">
+      Labeled items are referenced in the text to illustrate how persona content can inform requirements elicitation.
+    </figcaption> -->
+  </figure>
+</body>
+</html>
