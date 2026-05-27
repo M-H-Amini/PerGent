@@ -63,15 +63,15 @@ Personas are widely used in software engineering to support requirements elicita
 └── Readme.md                       # This file
 ```
 
-| Folder                                                                       | Description                                                                                                                      |
-| ---------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------- |
-| [`Code/`](Code/)                                                             | Runnable demo of the PerGent agent orchestration with setup notes.                                                               |
-| [`Experiments/`](Experiments/)                                               | Data and scripts organized by research question (RQ1-RQ3).                                                                       |
-| [`Figures/`](Figures/)                                                       | Plots and figures illustrating our methodology, tools architecture, and evaluation results.                                      |
-| [`Prompt Outlines/`](Prompt%20Outlines/)                                     | Prompt outlines used in the **PerGent** agentic pipeline and the baseline approaches described in the paper.                     |
-| [`Human Calibration of LLM Judge/`](Human%20Calibration%20of%20LLM%20Judge/) | A PDF containing the detailed **LLM-as-Judge** calibration process conducted by domain experts.                                  |
-| [`Sample Personas/`](Sample%20Personas/)                                     | Contains example personas generated from public job postings for illustration only; no proprietary partner resources were used.  |
-| [`Edit Examples/`](Edit%20Examples/)                                         | Contains examples of edits that domain experts applied to generated personas, demonstrating typical corrections and refinements. |
+| Folder                                                                       | Description                                                                                                             |
+| ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
+| [`Code/`](Code/)                                                             | Runnable demo of the PerGent agent orchestration with setup notes.                                                      |
+| [`Experiments/`](Experiments/)                                               | Data and scripts organized by research question (RQ1-RQ3).                                                              |
+| [`Figures/`](Figures/)                                                       | Plots and figures illustrating our methodology, tools architecture, and evaluation results.                             |
+| [`Prompt Outlines/`](Prompt%20Outlines/)                                     | Prompt outlines used in the **PerGent** agentic pipeline and the baseline approaches described in the paper.            |
+| [`Human Calibration of LLM Judge/`](Human%20Calibration%20of%20LLM%20Judge/) | A PDF containing the detailed **LLM-as-Judge** calibration process conducted by domain experts.                         |
+| [`Sample Personas/`](Sample%20Personas/)                                     | Example personas generated from public job postings for illustration only; no proprietary partner resources were used.  |
+| [`Edit Examples/`](Edit%20Examples/)                                         | Examples of edits that domain experts applied to generated personas, demonstrating typical corrections and refinements. |
 
 ---
 
