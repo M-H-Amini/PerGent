@@ -1,6 +1,6 @@
 This folder provides a high-level illustration of the implementation for PerGent and the baseline used in the paper.
 
-Contents
+# Contents
 
 - `pergent.py` — PerGent end-to-end orchestration (generator + critic + orchestrator).
 - `pergent_no_res.py` — PerGent variant without the external resources (PerGentNoRes baseline).
@@ -9,7 +9,7 @@ Contents
 - `pergent_generator.txt`, `pergent_critic.txt`, `oneshot_generator.txt` — prompt files used by the scripts.
 - `api.txt` — local placeholder for your OpenAI API key (one line, the key only).
 
-Quick start
+# Quick start
 
 1. Make sure you have Python 3 installed.
 
@@ -24,7 +24,7 @@ python oneshot.py
 python oneshot_res.py
 ```
 
-Notes
+# Notes
 
 - The scripts use the prompt files in this directory. Edit the `*_generator.txt` and `*_critic.txt` files to adjust behavior or to reproduce experiments.
 - See the repository root `Readme.md` for pointers to the `Experiments/` folder and the evaluation materials.
