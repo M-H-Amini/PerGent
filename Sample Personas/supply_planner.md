@@ -1,6 +1,6 @@
 # Supply Planner
 
-![Supply Planner avatar](avatar.png)
+![Supply Planner avatar](supply_planner_avatar.png)
 
 ## Jobs to be Done
 

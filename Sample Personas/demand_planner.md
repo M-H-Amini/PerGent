@@ -1,6 +1,6 @@
 # Demand Planner
 
-![Demand Planner avatar](avatar.png)
+![Demand Planner avatar](demand_planner_avatar.png)
 
 ## Jobs to be Done
 
